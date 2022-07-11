@@ -32,9 +32,11 @@ public class TestBasePageOthers {
         WebElement element = Driver.getDriver().findElement(By.xpath("(//li[contains(@class,' dropdown-level-1')]//span[contains(text(),'" + module +"')])[1]"));
         actions.moveToElement(element).perform();
 
-        Driver.getDriver().findElement(By.xpath("(//li[contains(@class,' dropdown-level-1')]//span[contains(text(),'"+ module +"')])[1]/../..//div//a//span[text()='" + feature +"']")).click();
+        Driver.getDriver().findElement(By.xpath("(//li[contains(@class,' dropdown-level-1')]//span[contains(text(),'"+ module +"')])[1]/../..//div//a//span[contains(text(),'" + feature +"')]")).click();
 
     }
+
+
 
     public void userMenuOption(String options){
 
