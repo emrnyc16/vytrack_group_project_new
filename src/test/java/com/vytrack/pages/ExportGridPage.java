@@ -13,4 +13,7 @@ public class ExportGridPage {
     }
     @FindBy (xpath ="//a[@title='With this button you will export the content of the grid as it appears to you, with filters and sorting applied. All pages will be exported.']")
     public WebElement exportGridBtn;
+
+    @FindBy (xpath = "//a[@title='With this button you will export the content of the grid as it appears to you, with filters and sorting applied. All pages will be exported.']//following-sibling::ul")
+    public WebElement exportDrop;
 }

@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -39,6 +40,9 @@ public class ExportGridStepDef {
     @Then("i can click export grid dropdown")
     public void i_can_click_export_grid_dropdown() throws IOException {
         exportGridPage.exportGridBtn.click();
+
+        Assert.assertTrue("Failed", exportGridPage.exportDrop.isDisplayed() );
+
 
         File source = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(source, new File("C:\\Users\\aydog\\Downloads\\VyTrack Store Manager\\ScreenShot1.png"));
